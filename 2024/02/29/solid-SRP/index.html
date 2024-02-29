@@ -14,18 +14,27 @@
     
     <!--- Seo Part-->
     
-    <link rel="canonical" href="https://jay841224.github.io/tags/ai/"/>
+    <link rel="canonical" href="https://jay841224.github.io/2024/02/29/solid-srp/"/>
     <meta name="robots" content="index,follow">
     <meta name="googlebot" content="index,follow">
     <meta name="revisit-after" content="1 days">
     
-        <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="https://jay841224.github.io/tags/ai/index.html">
+        <meta name="description" content="設計原則一共有五大設計原則 SOLID，這些原則終極目標就是要達成  能夠容忍變化 容易理解 能在許多系統中皆能使用的元件基礎  今天先介紹 SOLID 的 S - SRP SRP - Single Responsibility Principle (單一職責原則)SRP 看起來很像是一個函式只應該做一件事，雖然這也是一種原則，但這不是 SRP。 SRP 原則是說一個模組應該只對一個角色負責。 W">
+<meta property="og:type" content="article">
+<meta property="og:title" content="solid-SRP">
+<meta property="og:url" content="https://jay841224.github.io/2024/02/29/solid-SRP/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="設計原則一共有五大設計原則 SOLID，這些原則終極目標就是要達成  能夠容忍變化 容易理解 能在許多系統中皆能使用的元件基礎  今天先介紹 SOLID 的 S - SRP SRP - Single Responsibility Principle (單一職責原則)SRP 看起來很像是一個函式只應該做一件事，雖然這也是一種原則，但這不是 SRP。 SRP 原則是說一個模組應該只對一個角色負責。 W">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://jay841224.github.io/images/solidA.png">
+<meta property="og:image" content="https://jay841224.github.io/images/solidB.png">
+<meta property="article:published_time" content="2024-02-29T14:43:36.000Z">
+<meta property="article:modified_time" content="2024-02-29T16:19:34.136Z">
 <meta property="article:author" content="John Doe">
+<meta property="article:tag" content="java">
+<meta property="article:tag" content="Clean Architecture">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://jay841224.github.io/images/solidA.png">
     
     
     <!--- Icon Part-->
@@ -37,7 +46,7 @@
     
     <title>
         
-            Tag: ai -
+            solid-SRP -
         
         魯捷Blog
     </title>
@@ -372,46 +381,207 @@
             <div class="main-content">
 
                 
-                    <div class="tag-container">
-	<div class="tag-name">
-		<i class="fa-solid fa-tag"></i>&nbsp;ai
-	</div>
-	<div class="tag-post-list">
-		
+                    <div class="post-page-container flex relative justify-between box-border w-full h-full">
+    <div class="article-content-container">
 
-<div class="archive-list-container">
-    
-        <section class="archive-item">
-            <div class="archive-item-header flex flex-row items-center mb-2">
-                <span class="archive-year font-semibold text-3xl mr-2">2024</span>
-                <span class="archive-year-post-count text-xs md:text-sm font-bold rounded-small bg-third-background-color py-[2px] px-[10px] border border-border-color">1</span>
+        <div class="article-title relative w-full">
+            
+                <div class="w-full flex items-center pt-6 justify-start">
+                    <h1 class="article-title-regular text-second-text-color text-4xl md:text-6xl font-bold px-2 sm:px-6 md:px-8 py-3">solid-SRP</h1>
+                </div>
+            
             </div>
-            <ul class="article-list pl-8 text-lg leading-[1.5]">
-              
+
+        
+            <div class="article-header flex flex-row gap-2 items-center px-2 sm:px-6 md:px-8">
+                <div class="avatar w-[46px] h-[46px] flex-shrink-0 rounded-medium border border-border-color p-[1px]">
+                    <img src="/images/icon.png">
+                </div>
+                <div class="info flex flex-col justify-between">
+                    <div class="author flex items-center">
+                        <span class="name text-default-text-color text-lg font-semibold">魯捷</span>
+                        
+                            <span class="author-label ml-1.5 text-xs px-2 py-0.5 rounded-small text-third-text-color border border-shadow-color-1">Lv1</span>
+                        
+                    </div>
+                    <div class="meta-info">
+                        <div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        <i class="fa-regular fa-pen-fancy"></i>&nbsp;
+        <span class="desktop">2024-02-29 22:43:36</span>
+        <span class="mobile">2024-02-29 22:43:36</span>
+        <span class="hover-info">Created</span>
+    </span>
+    
+        <span class="article-date article-meta-item">
+            <i class="fa-regular fa-wrench"></i>&nbsp;
+            <span class="desktop">2024-03-01 00:19:34</span>
+            <span class="mobile">2024-03-01 00:19:34</span>
+            <span class="hover-info">Updated</span>
+        </span>
+    
+
+    
+    
+        <span class="article-tags article-meta-item">
+            <i class="fa-regular fa-tags"></i>&nbsp;
+            <ul>
                 
-                    
-                    <li class="article-item" date-is='02-05'>
+                    <li>
+                        <a href="/tags/java/">java</a>&nbsp;
+                    </li>
                 
+                    <li>
+                        | <a href="/tags/Clean-Architecture/">Clean Architecture</a>&nbsp;
+                    </li>
                 
-                    <a href="/2024/02/05/Copilot/" class="block overflow-hidden">
-                        <span class="article-title mb-0.5 text-2xl">Copilot</span>
-                    </a>
-                
-              
             </ul>
-        </section>
+        </span>
+    
+
+    
+    
+    
+    
+        <span class="article-pv article-meta-item">
+            <i class="fa-regular fa-eye"></i>&nbsp;<span id="busuanzi_value_page_pv"></span>
+        </span>
     
 </div>
 
-	</div>
+                    </div>
+                </div>
+            </div>
+        
+
+        
+
+
+        <div class="article-content markdown-body px-2 sm:px-6 md:px-8 pb-8">
+            <h1 id="設計原則"><a href="#設計原則" class="headerlink" title="設計原則"></a>設計原則</h1><p>一共有五大設計原則 SOLID，這些原則終極目標就是要達成</p>
+<ul>
+<li>能夠容忍變化</li>
+<li>容易理解</li>
+<li>能在許多系統中皆能使用的元件基礎</li>
+</ul>
+<p>今天先介紹 SOLID 的 S - SRP</p>
+<h2 id="SRP-Single-Responsibility-Principle-單一職責原則"><a href="#SRP-Single-Responsibility-Principle-單一職責原則" class="headerlink" title="SRP - Single Responsibility Principle (單一職責原則)"></a>SRP - Single Responsibility Principle (單一職責原則)</h2><p>SRP 看起來很像是一個<strong>函式</strong>只應該做一件事，雖然這也是一種原則，但這不是 SRP。</p>
+<p>SRP 原則是說一個模組應該只對一個角色負責。</p>
+<p>Why:</p>
+<ul>
+<li>在不同角色間使用相同的方法，在未來有不同需求時容易改 A 壞 B。</li>
+</ul>
+<p>假設今天有海外和國內兩種消費，abroadPay 和 internalPay 分別計算消費金額，但都會呼叫 calPay 去做計算，當今天突然海外消費要多收 10% 服務費所以海外團隊就去修改了 calPay，上線之後國內消費也被多收錢了!!</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/solidA.png"
+                     
+                ></p>
+<ul>
+<li>不同角色的團隊要修改同一個模組，將會有合併的問題。</li>
+</ul>
+<p>How:</p>
+<p>那該怎麼做呢? </p>
+<p>讓海外跟國內各自維護一個 claPay 就可以了，Facade 裡面的代碼很少，負責去實例化 Calculator 而已。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/solidB.png"
+                     
+                ></p>
+
+        </div>
+
+        
+            <div class="post-copyright-info w-full my-8 px-2 sm:px-6 md:px-8">
+                <div class="article-copyright-info-container">
+    <ul>
+        <li><strong>Title:</strong> solid-SRP</li>
+        <li><strong>Author:</strong> 魯捷</li>
+        <li><strong>Created at
+                :</strong> 2024-02-29 22:43:36</li>
+        
+            <li>
+                <strong>Updated at
+                    :</strong> 2024-03-01 00:19:34
+            </li>
+        
+        <li>
+            <strong>Link:</strong> https://redefine.ohevan.com/2024/02/29/solid-SRP/
+        </li>
+        <li>
+            <strong>
+                License:
+            </strong>
+            
+
+            
+                This work is licensed under <a class="license" target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0">CC BY-NC-SA 4.0</a>.
+            
+        </li>
+    </ul>
 </div>
 
-<div class="tag-paginator">
-	<div class="paginator">
-    <span class="page-number current">1</span>
+            </div>
+        
+
+        
+            <ul class="post-tags-box text-lg mt-1.5 flex-wrap justify-center flex md:hidden">
+                
+                    <li class="tag-item mx-0.5">
+                        <a href="/tags/java/">#java</a>&nbsp;
+                    </li>
+                
+                    <li class="tag-item mx-0.5">
+                        <a href="/tags/Clean-Architecture/">#Clean Architecture</a>&nbsp;
+                    </li>
+                
+            </ul>
+        
+
+        
+
+        
+            <div class="article-nav my-8 flex justify-between items-center px-2 sm:px-6 md:px-8">
+                
+                
+                    <div class="article-next border-border-color shadow-redefine-flat shadow-shadow-color-2 rounded-medium px-4 py-2 hover:shadow-redefine-flat-hover hover:shadow-shadow-color-2">
+                        <a class="next"
+                        rel="next"
+                        href="/2024/02/10/Functional/"
+                        >
+                            <span class="title flex justify-center items-center">
+                                <span class="post-nav-title-item">函數式程式設計</span>
+                                <span class="post-nav-item">Next posts</span>
+                            </span>
+                            <span class="right arrow-icon flex justify-center items-center">
+                                <i class="fa-solid fa-chevron-right"></i>
+                            </span>
+                        </a>
+                    </div>
+                
+            </div>
+        
+
+
+        
+    </div>
+
+    
+        <div class="toc-content-container">
+            <div class="post-toc-wrap">
+    <div class="post-toc">
+        <div class="toc-title">On this page</div>
+        <div class="page-title">solid-SRP</div>
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%A8%AD%E8%A8%88%E5%8E%9F%E5%89%87"><span class="nav-text">設計原則</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#SRP-Single-Responsibility-Principle-%E5%96%AE%E4%B8%80%E8%81%B7%E8%B2%AC%E5%8E%9F%E5%89%87"><span class="nav-text">SRP - Single Responsibility Principle (單一職責原則)</span></a></li></ol></li></ol>
+
+    </div>
+</div>
+        </div>
+    
 </div>
 
-</div>
 
 
                 
@@ -485,6 +655,23 @@
         </div>
     </div>
 
+    
+        <div class="post-tools">
+            <div class="post-tools-container">
+    <ul class="article-tools-list">
+        <!-- TOC aside toggle -->
+        
+            <li class="right-bottom-tools page-aside-toggle">
+                <i class="fa-regular fa-outdent"></i>
+            </li>
+        
+
+        <!-- go comment -->
+        
+    </ul>
+</div>
+
+        </div>
     
 
     <div class="right-side-tools-container">
