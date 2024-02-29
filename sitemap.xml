@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://jay841224.github.io/tages/index.html</loc>
+    <loc>https://jay841224.github.io/tags/index.html</loc>
     
     <lastmod>2024-02-29</lastmod>
     
@@ -56,6 +56,13 @@
 
   
   <url>
+    <loc>https://jay841224.github.io/tags/ai/</loc>
+    <lastmod>2024-02-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://jay841224.github.io/tags/java/</loc>
     <lastmod>2024-02-29</lastmod>
     <changefreq>weekly</changefreq>
@@ -78,13 +85,6 @@
   
   <url>
     <loc>https://jay841224.github.io/tags/Blog/</loc>
-    <lastmod>2024-02-29</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://jay841224.github.io/tags/ai/</loc>
     <lastmod>2024-02-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
