@@ -14,17 +14,23 @@
     
     <!--- Seo Part-->
     
-    <link rel="canonical" href="https://jay841224.github.io/"/>
+    <link rel="canonical" href="https://jay841224.github.io/2024/03/01/mongodb/"/>
     <meta name="robots" content="index,follow">
     <meta name="googlebot" content="index,follow">
     <meta name="revisit-after" content="1 days">
     
-        <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="https://jay841224.github.io/index.html">
+        <meta name="description" content="會想試試看 mongoDB 是因為之前公司的教育訓練，雖然平常不會用到，但講師一直讚揚 mongoDB (我覺得好像業務 XD)，所以就想說來試試看。 這次想要把股市的資料放進 mongoDB 中，簡單記錄一下過程。 首先要有一個 mongoDB 帳號，並建立一個 database 和 collection (就是 table)，接著拿到 uri 我們就可以取得 database 連線，那以下是用">
+<meta property="og:type" content="article">
+<meta property="og:title" content="mongoDB 超級入門">
+<meta property="og:url" content="https://jay841224.github.io/2024/03/01/mongoDB/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="會想試試看 mongoDB 是因為之前公司的教育訓練，雖然平常不會用到，但講師一直讚揚 mongoDB (我覺得好像業務 XD)，所以就想說來試試看。 這次想要把股市的資料放進 mongoDB 中，簡單記錄一下過程。 首先要有一個 mongoDB 帳號，並建立一個 database 和 collection (就是 table)，接著拿到 uri 我們就可以取得 database 連線，那以下是用">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2024-03-01T06:44:54.000Z">
+<meta property="article:modified_time" content="2024-03-01T07:00:22.138Z">
 <meta property="article:author" content="John Doe">
+<meta property="article:tag" content="mongoDB">
+<meta property="article:tag" content="python">
 <meta name="twitter:card" content="summary">
     
     
@@ -36,6 +42,8 @@
     <!--- Page Info-->
     
     <title>
+        
+            mongoDB 超級入門 -
         
         魯捷Blog
     </title>
@@ -262,63 +270,6 @@
 <main class="page-container" id="swup">
 
     
-        
-    <style>
-        .home-banner-container {
-            background: none !important;
-        }
-        .home-article-item,
-        .sidebar-links,
-        .sidebar-content,
-        a.page-number,
-        a.extend,
-        .sidebar-links .links:hover,
-        .right-bottom-tools,
-        footer.footer {
-            background-color: var(--background-color-transparent-80) !important;
-        }
-        .right-bottom-tools:hover,
-        a.page-number:hover,
-        a.extend:hover {
-            background-color: var(--primary-color) !important;
-        }
-        .site-info,
-        .home-article-sticky-label {
-            background-color: var(--background-color-transparent-15) !important;
-        }
-        .home-article-sticky-label {
-            backdrop-filter: none !important;
-        }
-    </style>
-    <div class="home-banner-background transition-fade fixed top-0 left-0 w-screen h-screen scale-125 sm:scale-110 box-border will-change-transform bg-cover">
-        <img src="/images/wallhaven-wqery6-light.webp" alt="home-banner-background" class="w-full h-full object-cover dark:hidden">
-        <img src="/images/wallhaven-wqery6-dark.webp" alt="home-banner-background" class="w-full h-full object-cover hidden dark:block">
-    </div>
-
-
-<div class="home-banner-container flex justify-center items-center transition-fade relative">
-    
-    <div class="content mt-8 flex flex-col justify-center items-center">
-        <div class="description flex flex-col justify-center items-center w-screen font-medium text-center"
-        
-        >
-            魯捷Blog
-            
-            
-                <p><i id="subtitle"></i></p>
-            
-        </div>
-        
-    </div>
-    <script>
-        const scrollToMain = ()=> {
-            console.log('scroll');
-            const target = document.querySelector('.main-content-container');
-            target.scrollIntoView({ behavior: 'smooth'});
-        }
-    </script>
-</div>
-    
 
     <div class="main-content-container">
 
@@ -326,13 +277,13 @@
         <div class="main-content-header">
             <header class="navbar-container">
 
-    <div class="navbar-content has-home-banner">
+    <div class="navbar-content">
         <div class="left">
             
             <a class="logo-title" href="/">
-                <h1>
+                
                 魯捷Blog
-                </h1>
+                
             </a>
         </div>
 
@@ -346,7 +297,7 @@
 
                             <li class="navbar-item">
                                 <!-- Menu -->
-                                <a class="active"
+                                <a class=""
                                    href="/"
                                         >
                                     <i class="fa-regular fa-house fa-fw"></i>
@@ -380,7 +331,7 @@
 
                     <li class="drawer-navbar-item text-base my-1.5 flex flex-col w-full">
                         
-                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full active"
+                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full "
                            href="/"
                         >
                             <span>
@@ -423,387 +374,201 @@
         <div class="main-content-body">
 
             
-                <div class="home-sidebar-container">
-    <div class="sticky-container sticky">
-        
-        
-            
-            <div class="sidebar-content" >
-                <div class="avatar flex justify-center">
-    <img src="/images/icon.png">
-</div>
-                <div class="author flex flex-col justify-center my-2.5 mx-0">
-    <div class="name">魯捷</div>
-    
-        <div class="label">Lv1</div>
-    
-</div>
-                <div class="statistics flex justify-around my-2.5">
-    <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/tags">
-        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">7</div>
-        <div class="label text-third-text-color text-sm">Tags</div>
-    </a>
-    <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/categories">
-        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">0</div>
-        <div class="label text-third-text-color text-sm">Categories</div>
-    </a>
-    <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/archives">
-        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">6</div>
-        <div class="label text-third-text-color text-sm">Posts</div>
-    </a>
-</div>
-            </div>
-        
-
-    </div>
-</div>
-
-            
 
             <div class="main-content">
 
                 
-                    <div class="home-content-container">
-    <ul class="home-article-list">
+                    <div class="post-page-container flex relative justify-between box-border w-full h-full">
+    <div class="article-content-container">
+
+        <div class="article-title relative w-full">
+            
+                <div class="w-full flex items-center pt-6 justify-start">
+                    <h1 class="article-title-regular text-second-text-color text-4xl md:text-6xl font-bold px-2 sm:px-6 md:px-8 py-3">mongoDB 超級入門</h1>
+                </div>
+            
+            </div>
+
         
-            <li class="home-article-item">
-
-                
-
-                
-
-                
-                <div class="flex flex-col gap-5 px-7 pb-7 pt-7">
-                    <h3 class="home-article-title">
-                        <a href="/2024/03/01/mongoDB/">
-                            mongoDB 超級入門
-                        </a>
-                    </h3>
-
-                    <div class="home-article-content markdown-body">
+            <div class="article-header flex flex-row gap-2 items-center px-2 sm:px-6 md:px-8">
+                <div class="avatar w-[46px] h-[46px] flex-shrink-0 rounded-medium border border-border-color p-[1px]">
+                    <img src="/images/icon.png">
+                </div>
+                <div class="info flex flex-col justify-between">
+                    <div class="author flex items-center">
+                        <span class="name text-default-text-color text-lg font-semibold">魯捷</span>
                         
-                            會想試試看 mongoDB 是因為之前公司的教育訓練，雖然平常不會用到，但講師一直讚揚 mongoDB (我覺得好像業務 XD)，所以就想說來試試看。
-這次想要把股市的資料放進 mongoDB 中，簡單記錄一下過程。
-首先要有一個 mongoDB 帳...
+                            <span class="author-label ml-1.5 text-xs px-2 py-0.5 rounded-small text-third-text-color border border-shadow-color-1">Lv1</span>
                         
                     </div>
-
-                    <div class="home-article-meta-info-container">
-    <div class="home-article-meta-info">
-        <span><i class="fa-solid fa-calendars"></i>&nbsp;
-            <span class="home-article-date" data-date="Fri Mar 01 2024 14:44:54 GMT+0800">
-                
-                    2024-03-01
-                
-            </span>
+                    <div class="meta-info">
+                        <div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        <i class="fa-regular fa-pen-fancy"></i>&nbsp;
+        <span class="desktop">2024-03-01 14:44:54</span>
+        <span class="mobile">2024-03-01 14:44:54</span>
+        <span class="hover-info">Created</span>
+    </span>
+    
+        <span class="article-date article-meta-item">
+            <i class="fa-regular fa-wrench"></i>&nbsp;
+            <span class="desktop">2024-03-01 15:22</span>
+            <span class="mobile">2024-03-01 15:22</span>
+            <span class="hover-info">Updated</span>
         </span>
-        
-        
-            <span class="home-article-tag">
-                <i class="fa-solid fa-tags"></i>&nbsp;
-                <ul>
-                    
-                        <li>
-                            
-                            <a href="/tags/mongoDB/">mongoDB</a>&nbsp;
-                        </li>
-                    
-                        <li>
-                            | 
-                            <a href="/tags/python/">python</a>&nbsp;
-                        </li>
-                    
-                </ul>
-            </span>
-        
-    </div>
+    
 
-    <a href="/2024/03/01/mongoDB/">Read more<span class="seo-reader-text">mongoDB 超級入門</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
+    
+    
+        <span class="article-tags article-meta-item">
+            <i class="fa-regular fa-tags"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/tags/mongoDB/">mongoDB</a>&nbsp;
+                    </li>
+                
+                    <li>
+                        | <a href="/tags/python/">python</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+
+    
+    
+    
+    
+        <span class="article-pv article-meta-item">
+            <i class="fa-regular fa-eye"></i>&nbsp;<span id="busuanzi_value_page_pv"></span>
+        </span>
+    
 </div>
 
-                </div>
-            </li>
-        
-            <li class="home-article-item">
-
-                
-
-                
-
-                
-                <div class="flex flex-col gap-5 px-7 pb-7 pt-7">
-                    <h3 class="home-article-title">
-                        <a href="/2024/02/29/solid-SRP/">
-                            solid-SRP
-                        </a>
-                    </h3>
-
-                    <div class="home-article-content markdown-body">
-                        
-                            設計原則一共有五大設計原則 SOLID，這些原則終極目標就是要達成
-
-能夠容忍變化
-容易理解
-能在許多系統中皆能使用的元件基礎
-
-今天先介紹 SOLID 的 S - SRP
-SRP - Single Responsibility Principle ...
-                        
                     </div>
-
-                    <div class="home-article-meta-info-container">
-    <div class="home-article-meta-info">
-        <span><i class="fa-solid fa-calendars"></i>&nbsp;
-            <span class="home-article-date" data-date="Thu Feb 29 2024 22:43:36 GMT+0800">
-                
-                    2024-02-29
-                
-            </span>
-        </span>
-        
-        
-            <span class="home-article-tag">
-                <i class="fa-solid fa-tags"></i>&nbsp;
-                <ul>
-                    
-                        <li>
-                            
-                            <a href="/tags/java/">java</a>&nbsp;
-                        </li>
-                    
-                        <li>
-                            | 
-                            <a href="/tags/Clean-Architecture/">Clean Architecture</a>&nbsp;
-                        </li>
-                    
-                </ul>
-            </span>
-        
-    </div>
-
-    <a href="/2024/02/29/solid-SRP/">Read more<span class="seo-reader-text">solid-SRP</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
-</div>
-
                 </div>
+            </div>
+        
+
+        
+
+
+        <div class="article-content markdown-body px-2 sm:px-6 md:px-8 pb-8">
+            <p>會想試試看 mongoDB 是因為之前公司的教育訓練，雖然平常不會用到，但講師一直讚揚 mongoDB (我覺得好像業務 XD)，所以就想說來試試看。</p>
+<p>這次想要把股市的資料放進 mongoDB 中，簡單記錄一下過程。</p>
+<p>首先要有一個 mongoDB 帳號，並建立一個 database 和 collection (就是 table)，接著拿到 uri 我們就可以取得 database 連線，那以下是用 python 來嘗試。</p>
+<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">uri = <span class="string">&quot;mongodb+srv://jay:&lt;username&gt;@cluster0.spsud0d.mongodb.net/?retryWrites=true&amp;w=majority&quot;</span></span><br><span class="line">client = MongoClient(uri, server_api=ServerApi(<span class="string">&#x27;1&#x27;</span>))</span><br><span class="line">db = client.get_database(<span class="string">&quot;db_name&quot;</span>)</span><br></pre></td></tr></table></figure></div>
+
+<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">collection = db.get_collection(<span class="string">&#x27;collection_name&#x27;</span>)</span><br></pre></td></tr></table></figure></div>
+
+<p>這邊踩到一個錯誤，因為股市資料量蠻大的，有些迴圈去反覆做 insert 或是 query，導致我連線爆掉，後來發現是因為一直重複 get_database 導致的，後來不要重複取得 database 連線就 ok 了。</p>
+<p>接著就是做 CRUD 了。</p>
+<h2 id="insert"><a href="#insert" class="headerlink" title="insert"></a>insert</h2><div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">document[<span class="string">&quot;_id&quot;</span>] = document[<span class="string">&quot;symbol&quot;</span>]</span><br><span class="line"><span class="comment"># document 是 dict</span></span><br><span class="line">collection.insert_one(document=document)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 可以直接給 ObjectId</span></span><br><span class="line">document[<span class="string">&quot;_id&quot;</span>] = ObjectId</span><br></pre></td></tr></table></figure></div>
+
+<p>這邊踩了一個坑，在 insert 時一直噴 TypeError: Object of type ObjectId is not JSON serializable when insert，是因為 MongoDB 用的 Bson 有一個 _id 欄位作為 id，我的解決方法是直接在 document 中塞一個 _id 欄位進去，因為這次是做股票的 collection，剛好可以用股票代號當作 ID。</p>
+<h2 id="update"><a href="#update" class="headerlink" title="update"></a>update</h2><div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 查詢全部</span></span><br><span class="line">update_query = &#123;&#125;</span><br><span class="line"><span class="comment"># 將 data 欄位刪除，1就代表 true 的意思</span></span><br><span class="line">update_operation = &#123;<span class="string">&quot;$unset&quot;</span>: &#123;<span class="string">&quot;data&quot;</span>: <span class="number">1</span>&#125;&#125;</span><br><span class="line"></span><br><span class="line">collection.update_many(update_query, update_operation)</span><br></pre></td></tr></table></figure></div>
+
+<h2 id="find"><a href="#find" class="headerlink" title="find"></a>find</h2><div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 查詢代號為 2330 的 stockInfo</span></span><br><span class="line">stockInfo = collection.find_one(&#123;<span class="string">&quot;symbol&quot;</span>: <span class="string">&quot;2330&quot;</span>&#125;)</span><br></pre></td></tr></table></figure></div>
+
+<h2 id="delete"><a href="#delete" class="headerlink" title="delete"></a>delete</h2><p>delete 的用法基本上和 find 差不多，就是把查詢的語法放進來。</p>
+<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">collection.delete_one(&#123;<span class="string">&quot;symbol&quot;</span>: <span class="string">&quot;2330&quot;</span>&#125;)</span><br></pre></td></tr></table></figure></div>
+
+<p>真的是超級入門，但就紀錄一下今天用到的部分，第一次使用覺得蠻新穎的，未來如果工作上有機會用到再來深入研究了ＱＱ</p>
+
+        </div>
+
+        
+            <div class="post-copyright-info w-full my-8 px-2 sm:px-6 md:px-8">
+                <div class="article-copyright-info-container">
+    <ul>
+        <li><strong>Title:</strong> mongoDB 超級入門</li>
+        <li><strong>Author:</strong> 魯捷</li>
+        <li><strong>Created at
+                :</strong> 2024-03-01 14:44:54</li>
+        
+            <li>
+                <strong>Updated at
+                    :</strong> 2024-03-01 15:00:22
             </li>
         
-            <li class="home-article-item">
+        <li>
+            <strong>Link:</strong> https://redefine.ohevan.com/2024/03/01/mongoDB/
+        </li>
+        <li>
+            <strong>
+                License:
+            </strong>
+            
 
-                
-
-                
-
-                
-                <div class="flex flex-col gap-5 px-7 pb-7 pt-7">
-                    <h3 class="home-article-title">
-                        <a href="/2024/02/10/Functional/">
-                            函數式程式設計
-                        </a>
-                    </h3>
-
-                    <div class="home-article-content markdown-body">
-                        
-                            最近在讀 Clean Architecture 無瑕的程式碼，讀到第六個章節就覺得自己在 Java 的函數式設計不夠熟悉(函數介面)，就整理了一下基本應用，希望之後可以應用到底層架構中。
-函數介面（Functional Interface）
-只包含一...
-                        
-                    </div>
-
-                    <div class="home-article-meta-info-container">
-    <div class="home-article-meta-info">
-        <span><i class="fa-solid fa-calendars"></i>&nbsp;
-            <span class="home-article-date" data-date="Sat Feb 10 2024 22:11:12 GMT+0800">
-                
-                    2024-02-10
-                
-            </span>
-        </span>
-        
-        
-            <span class="home-article-tag">
-                <i class="fa-solid fa-tags"></i>&nbsp;
-                <ul>
-                    
-                        <li>
-                            
-                            <a href="/tags/java/">java</a>&nbsp;
-                        </li>
-                    
-                        <li>
-                            | 
-                            <a href="/tags/Clean-Architecture/">Clean Architecture</a>&nbsp;
-                        </li>
-                    
-                </ul>
-            </span>
-        
-    </div>
-
-    <a href="/2024/02/10/Functional/">Read more<span class="seo-reader-text">函數式程式設計</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
-</div>
-
-                </div>
-            </li>
-        
-            <li class="home-article-item">
-
-                
-
-                
-
-                
-                <div class="flex flex-col gap-5 px-7 pb-7 pt-7">
-                    <h3 class="home-article-title">
-                        <a href="/2024/02/05/Copilot/">
-                            Copilot
-                        </a>
-                    </h3>
-
-                    <div class="home-article-content markdown-body">
-                        
-                            Copilot從之前試用期間過了之後就沒有再訂閱，最近又回來付費訂閱啦，所以就稍微記錄一下快捷指令用法等等的～
-簡單介紹一下 Copilot (應該沒人沒用過就是了)，目前 Copilot 應該是已經使用了 GPT-4 了，那他就是拿 Github ...
-                        
-                    </div>
-
-                    <div class="home-article-meta-info-container">
-    <div class="home-article-meta-info">
-        <span><i class="fa-solid fa-calendars"></i>&nbsp;
-            <span class="home-article-date" data-date="Mon Feb 05 2024 23:39:22 GMT+0800">
-                
-                    2024-02-05
-                
-            </span>
-        </span>
-        
-        
-            <span class="home-article-tag">
-                <i class="fa-solid fa-tags"></i>&nbsp;
-                <ul>
-                    
-                        <li>
-                            
-                            <a href="/tags/ai/">ai</a>&nbsp;
-                        </li>
-                    
-                </ul>
-            </span>
-        
-    </div>
-
-    <a href="/2024/02/05/Copilot/">Read more<span class="seo-reader-text">Copilot</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
-</div>
-
-                </div>
-            </li>
-        
-            <li class="home-article-item">
-
-                
-
-                
-
-                
-                <div class="flex flex-col gap-5 px-7 pb-7 pt-7">
-                    <h3 class="home-article-title">
-                        <a href="/2024/01/27/%E6%9E%B6%E8%A8%AD%E9%9D%9C%E6%85%8B%E7%B6%B2%E7%AB%99/">
-                            用 Hexo 和 github pages 架設靜態網站
-                        </a>
-                    </h3>
-
-                    <div class="home-article-content markdown-body">
-                        
-                            為什麼用他從以前就經常有想要寫文章的想法，記錄旅遊、食記、技術筆記之類的，但都僅止於想想，這次終於動手啦，第一篇就紀錄一下如何利用 github pages 架設一個免費的靜態網站吧～
-會想要用 Hexo 也沒什麼原因，找了幾個覺得他最方便，也看到不...
-                        
-                    </div>
-
-                    <div class="home-article-meta-info-container">
-    <div class="home-article-meta-info">
-        <span><i class="fa-solid fa-calendars"></i>&nbsp;
-            <span class="home-article-date" data-date="Sat Jan 27 2024 14:36:26 GMT+0800">
-                
-                    2024-01-27
-                
-            </span>
-        </span>
-        
-        
-            <span class="home-article-tag">
-                <i class="fa-solid fa-tags"></i>&nbsp;
-                <ul>
-                    
-                        <li>
-                            
-                            <a href="/tags/Hexo/">Hexo</a>&nbsp;
-                        </li>
-                    
-                        <li>
-                            | 
-                            <a href="/tags/Blog/">Blog</a>&nbsp;
-                        </li>
-                    
-                </ul>
-            </span>
-        
-    </div>
-
-    <a href="/2024/01/27/%E6%9E%B6%E8%A8%AD%E9%9D%9C%E6%85%8B%E7%B6%B2%E7%AB%99/">Read more<span class="seo-reader-text">用 Hexo 和 github pages 架設靜態網站</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
-</div>
-
-                </div>
-            </li>
-        
-            <li class="home-article-item">
-
-                
-
-                
-
-                
-                <div class="flex flex-col gap-5 px-7 pb-7 pt-7">
-                    <h3 class="home-article-title">
-                        <a href="/2024/01/17/hello-world/">
-                            Hello World
-                        </a>
-                    </h3>
-
-                    <div class="home-article-content markdown-body">
-                        
-                            Welcome to Hexo ! This is your very first post. Check documentation  for more info. If you get any problems when using Hexo, ...
-                        
-                    </div>
-
-                    <div class="home-article-meta-info-container">
-    <div class="home-article-meta-info">
-        <span><i class="fa-solid fa-calendars"></i>&nbsp;
-            <span class="home-article-date" data-date="Wed Jan 17 2024 16:08:32 GMT+0800">
-                
-                    2024-01-17
-                
-            </span>
-        </span>
-        
-        
-    </div>
-
-    <a href="/2024/01/17/hello-world/">Read more<span class="seo-reader-text">Hello World</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
-</div>
-
-                </div>
-            </li>
-        
+            
+                This work is licensed under <a class="license" target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0">CC BY-NC-SA 4.0</a>.
+            
+        </li>
     </ul>
-
-    <div class="home-paginator px-7 py-5">
-        <div class="paginator">
-    <span class="page-number current">1</span>
 </div>
+
+            </div>
+        
+
+        
+            <ul class="post-tags-box text-lg mt-1.5 flex-wrap justify-center flex md:hidden">
+                
+                    <li class="tag-item mx-0.5">
+                        <a href="/tags/mongoDB/">#mongoDB</a>&nbsp;
+                    </li>
+                
+                    <li class="tag-item mx-0.5">
+                        <a href="/tags/python/">#python</a>&nbsp;
+                    </li>
+                
+            </ul>
+        
+
+        
+
+        
+            <div class="article-nav my-8 flex justify-between items-center px-2 sm:px-6 md:px-8">
+                
+                
+                    <div class="article-next border-border-color shadow-redefine-flat shadow-shadow-color-2 rounded-medium px-4 py-2 hover:shadow-redefine-flat-hover hover:shadow-shadow-color-2">
+                        <a class="next"
+                        rel="next"
+                        href="/2024/02/29/solid-SRP/"
+                        >
+                            <span class="title flex justify-center items-center">
+                                <span class="post-nav-title-item">solid-SRP</span>
+                                <span class="post-nav-item">Next posts</span>
+                            </span>
+                            <span class="right arrow-icon flex justify-center items-center">
+                                <i class="fa-solid fa-chevron-right"></i>
+                            </span>
+                        </a>
+                    </div>
+                
+            </div>
+        
+
+
+        
+    </div>
+
+    
+        <div class="toc-content-container">
+            <div class="post-toc-wrap">
+    <div class="post-toc">
+        <div class="toc-title">On this page</div>
+        <div class="page-title">mongoDB 超級入門</div>
+        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#insert"><span class="nav-text">insert</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#update"><span class="nav-text">update</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#find"><span class="nav-text">find</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#delete"><span class="nav-text">delete</span></a></li></ol>
 
     </div>
 </div>
+        </div>
+    
+</div>
 
-                    <div class="comment-container pjax"></div>
+
+
                 
 
             </div>
@@ -875,6 +640,23 @@ SRP - Single Responsibility Principle ...
         </div>
     </div>
 
+    
+        <div class="post-tools">
+            <div class="post-tools-container">
+    <ul class="article-tools-list">
+        <!-- TOC aside toggle -->
+        
+            <li class="right-bottom-tools page-aside-toggle">
+                <i class="fa-regular fa-outdent"></i>
+            </li>
+        
+
+        <!-- go comment -->
+        
+    </ul>
+</div>
+
+        </div>
     
 
     <div class="right-side-tools-container">
@@ -959,7 +741,6 @@ SRP - Single Responsibility Principle ...
         containers: ["#swup"],
     });
 </script>
-
 
 
 
